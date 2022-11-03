@@ -23,9 +23,9 @@ def change_color(color):
 hack_data = np.linspace(-10, 10, 1000)
 hack_y = np.zeros(1000)
 
-app = dash.Dash(__name__)
-app.css.append_css({'external_url':
-                    'https://codepen.io/chriddyp/pen/dZVMbK.css'})
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 styles = {'pre': {'border': 'thin lightgrey solid', 'overflowX': 'scroll'}}
 
